@@ -28,8 +28,10 @@ function creatGallery(event) {
 
   const imagePhoto = event.currentTarget.elements.search.value.trim();
   showLoader();
+  gallery.innerHTML = '';
   if (!imagePhoto) {
     gallery.innerHTML = '';
+    hiddeLoader();
     event.target.reset();
     return iziToast.error({
       message: `Sorry, there are no images matching your search query. Please try again!`,
@@ -60,11 +62,3 @@ function creatGallery(event) {
     });
   form.reset();
 }
-
-// function showLoader() {
-//   loader.classList.remove('is-hidden');
-// }
-
-// function hiddeLoader() {
-//   loader.classList.add('is-hidden');
-// }

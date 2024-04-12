@@ -9,6 +9,7 @@ export function fetchPhotosByQ(q) {
     image_type: 'photo',
     safesearch: 'true',
     // per_page: '9',
+    // page,
   });
 
   return fetch(`
