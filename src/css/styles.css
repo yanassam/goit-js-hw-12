@@ -234,3 +234,6 @@ height: 200px;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.btn-load-more{
+  width: 125px;
+}
