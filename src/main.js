@@ -84,6 +84,7 @@ function creatGallery(event) {
 
 function onClick() {
   page += 1;
+
   fetchPhotosByQ(imagePhoto, page).then(data => {
     gallery.insertAdjacentHTML('beforeEnd', createGalleryMarkup(data.hits));
 
@@ -95,6 +96,7 @@ function onClick() {
       top: cardHeight * 2,
       behavior: 'smooth',
     });
+
     const lastPages = Math.ceil(data.totalHits / 15);
     if (lastPages === page) {
       loadBtn.classList.add('is-hidden');
