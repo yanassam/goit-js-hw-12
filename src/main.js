@@ -98,7 +98,7 @@ function onClick() {
     });
 
     const lastPages = Math.ceil(data.totalHits / 15);
-
+    // test
     if (lastPages === page) {
       loadBtn.classList.add('is-hidden');
       iziToast.info({
